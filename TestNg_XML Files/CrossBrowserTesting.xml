@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" thread-count="5" parallel="tests">
+    <test verbose="2" preserve-order="true" name="ChromeTest">
+        <parameter name="Browser" value="chrome"/>
+    <classes><class name="com.Selenium.CrossBrowserTesting">
+        <methods><include name="SampleTest"/></methods>
+    </class>
+    </classes>
+</test>
+    <test verbose="2" preserve-order="true" name="FireFoxTest">
+        <parameter name="Browser" value="firefox"/>
+        <classes><class name="com.Selenium.CrossBrowserTesting">
+            <methods><include name="SampleTest"/></methods>
+        </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="EdgeTest">
+        <parameter name="Browser" value="edge"/>
+        <classes><class name="com.Selenium.CrossBrowserTesting">
+            <methods><include name="SampleTest"/></methods>
+        </class>
+        </classes>
+    </test>
+</suite>
